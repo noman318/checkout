@@ -1,17 +1,20 @@
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
 import Slider from "react-slick";
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import EventsCard from '../EventsCard';
+import NextArrowMovie from "./NextArrow";
+import PrevArrowMovie from "./PrevArrow";
+// import '../sliders.css'
 export default function RecomendedCard() {
   const settings = {
-    dots: true,
-    infinite: false,
+    dots: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 2,
     initialSlide: 0,
+    nextArrow: <NextArrowMovie/>,
+    prevArrow: <PrevArrowMovie/>,
     responsive: [
       {
         breakpoint: 1024,

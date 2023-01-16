@@ -4,14 +4,18 @@ import Slider from "react-slick";
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import EventsCard from '../EventsCard';
+import NextArrowMovie from './NextArrow';
+import PrevArrowMovie from './PrevArrow';
 export default function UpcommingCard() {
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 2,
     initialSlide: 0,
+    nextArrow: <NextArrowMovie/>,
+    prevArrow: <PrevArrowMovie/>,
     responsive: [
       {
         breakpoint: 1024,

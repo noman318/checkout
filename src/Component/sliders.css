@@ -1,44 +1,8 @@
+/* if u want to remove the  arrows on slider then we would use this css */
 .slick-arrow.slick-next:before {
     content: "";
   }
   
   .slick-arrow.slick-prev:before {
     content: "";
-  }
-  .slick-slider {
-    margin:0 -20px;
-    overflow: hidden;
-}
-@media only screen and (max-width: 400px){
-  .a1 img{
-    width:100px; 
-  }
-  .a2 img{
-    width:100px;
-  }
-  .a3 img{
-    width:100px;
-  }
-}
-@media only screen and (max-width: 600px){
-    .a1 img{
-      width:200px;
-    }
-    .a2 img{
-      width:200px;
-    }
-    .a3 img{
-      width:200px;
-    }
-  }
-  @media only screen and (max-width: 1024px){
-    .a1 img{
-      width:860px;
-    }
-    .a2 img{
-      width:860px;
-    }
-    .a3 img{
-      width:860px;
-    }
   }

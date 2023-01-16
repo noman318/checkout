@@ -1,20 +1,23 @@
 import * as React from 'react';
 // import { experimentalStyled as styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
 // import Paper from '@mui/material/Paper';
 import Slider from "react-slick";
-import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import EventsCard from '../EventsCard';
+import NextArrowMovie from './NextArrow';
+import PrevArrowMovie from './PrevArrow';
+
 export default function OngoingCard() {
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 2,
     initialSlide: 0,
+    nextArrow: <NextArrowMovie/>,
+    prevArrow: <PrevArrowMovie/>,
     responsive: [
       {
         breakpoint: 1024,
