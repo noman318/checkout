@@ -1,11 +1,11 @@
 import { Container } from '@mui/material'
 // import React from 'react'
-import Sliders from './Slider'
-import Footer from './Footer'
-import OngoingCard from './MovieDash/OngoingCard'
-import PastCard from './MovieDash/PastCard'
-import RecomendedCard from './MovieDash/RecomendedCard'
-import UpcommingCard from './MovieDash/UpcommingCard'
+import Sliders from '../components/Slider'
+import Footer from '../components/Footer'
+import OngoingCard from '../components/MovieDash/OngoingCard'
+import PastCard from '../components/MovieDash/PastCard'
+import RecomendedCard from '../components/MovieDash/RecomendedCard'
+import UpcommingCard from '../components/MovieDash/UpcommingCard'
 
 export default function Home():JSX.Element {
   return (

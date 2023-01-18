@@ -1,8 +1,0 @@
-/* if u want to remove the  arrows on slider then we would use this css */
-.slick-arrow.slick-next:before {
-    content: "";
-  }
-  
-  .slick-arrow.slick-prev:before {
-    content: "";
-  }

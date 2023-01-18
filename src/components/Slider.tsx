@@ -3,9 +3,8 @@ import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from 'styled-components';
-import { Container } from '@mui/material';
-import NextArrow from './NextArrow';
-import PrevArrow from './PrevArrow';
+import NextArrow from './ArrowSlider/NextArrow';
+import PrevArrow from './ArrowSlider/PrevArrow';
 // import './sliders.css'
 
 function Sliders() {
@@ -24,7 +23,7 @@ function Sliders() {
     };
 
     return (
-      <Container maxWidth="xl" >
+
         <Carousel {...settings}>
             <Warp>
                 <img src='https://drive.google.com/uc?id=14JFjPPTUK39SpIN77dCBtp4NFQENdred' alt='l' />
@@ -45,7 +44,6 @@ function Sliders() {
                 <img src='https://drive.google.com/uc?id=1Vl-dpwmWcV_eNyPHRIivRJMw_OUy28kE' alt='a' />
             </Warp>
         </Carousel>
-        </Container>
     )
 }
 
