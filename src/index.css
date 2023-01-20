@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.links{
+  text-decoration: none;
+  color: white;
+}
+.links_Avatar{
+  text-decoration: none;
+  color: black;
+}
+.avatar_List{
+  display: flex;
+  flex-direction: column;
+}
