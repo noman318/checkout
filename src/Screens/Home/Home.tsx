@@ -2,10 +2,10 @@ import { Container } from "@mui/material";
 // import React from 'react'
 import Sliders from "../../components/Slider";
 import Footer from "../../components/Footer";
-import OngoingCard from "../../components/MovieDash/OngoingCard";
-import PastCard from "../../components/MovieDash/PastCard";
-import RecomendedCard from "../../components/MovieDash/RecomendedCard";
-import UpcommingCard from "../../components/MovieDash/UpcommingCard";
+import OngoingCard from "../../components/MovieDash/OngoingEvent";
+import PastCard from "../../components/MovieDash/PastEvent";
+import RecomendedCard from "../../components/MovieDash/RecomendedEvent";
+import UpcommingCard from "../../components/MovieDash/UpcommingEvent";
 
 export default function Home(): JSX.Element {
   return (
