@@ -1,4 +1,3 @@
-import React from "react";
 import { LoginPage } from "./Screens/Login/Login";
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import { ForgotPassword } from "./Screens/Login/ForgotPassword";

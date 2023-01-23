@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import eventServices from '../Services/eventServices'
-import EventData from '../Interface/eventInterface';
+import EventData from '../Screens/eventInterface';
 export default function EventsCard():JSX.Element {
   const [event,setevent]=React.useState<Array<EventData>>([]);
    React.useEffect(()=>{
