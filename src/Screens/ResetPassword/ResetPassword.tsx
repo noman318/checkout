@@ -9,12 +9,10 @@ import {
   TextField,
   Avatar,
 } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { LockOutlined } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import gifLogo from "../../assets/SOWAREvent.gif";
 
-const theme = createTheme();
 
 export const ResetPassword = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -27,7 +25,6 @@ export const ResetPassword = () => {
   };
 
   return (
-    <ThemeProvider theme={theme}>
       <Grid container component="main" sx={{ height: "100vh" }}>
         <CssBaseline />
         <Grid
@@ -105,6 +102,5 @@ export const ResetPassword = () => {
           </Box>
         </Grid>
       </Grid>
-    </ThemeProvider>
   );
 };

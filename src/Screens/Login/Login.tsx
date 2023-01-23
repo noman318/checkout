@@ -12,7 +12,7 @@ import {
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { LockOutlined } from "@mui/icons-material";
 import { Link } from "react-router-dom";
-import gifLogo from "../../assets/SOWAREvent.gif";
+// import gifLogo from "../../assets/SOWAREvent.gif";
 import gifLightLogo from "../../assets/lightversion.gif";
 import loginServices from "../../Services/loginServices";
 
@@ -25,11 +25,13 @@ export const LoginPage = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    loginServices.login({
-      email: data.get("email"),
-      password: data.get("password"),
-    }).then(res=>console.log(res.data))
-    .catch(err=>console.log(err))
+    loginServices
+      .login({
+        email: data.get("email"),
+        password: data.get("password"),
+      })
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log(err));
     console.log({
       email: data.get("email"),
       password: data.get("password"),
@@ -37,7 +39,7 @@ export const LoginPage = () => {
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    // <ThemeProvider theme={theme}>
       <Grid container component="main" sx={{ height: "100vh" }}>
         <CssBaseline />
         <Grid
@@ -127,6 +129,6 @@ export const LoginPage = () => {
           </Box>
         </Grid>
       </Grid>
-    </ThemeProvider>
+    // </ThemeProvider>
   );
 };
