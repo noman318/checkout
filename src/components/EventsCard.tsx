@@ -6,7 +6,14 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import eventServices from "../Services/eventServices";
 import EventData from "../Screens/Home/Interface";
+import { useNavigate } from "react-router-dom";
 export default function EventsCard(): JSX.Element {
+  const navigate = useNavigate()
+  const getEventDetails =()=>{
+  console.log('Event details')
+  navigate('/eventdetails')
+  }
+
   const [event, setevent] = React.useState<Array<EventData>>([]);
   React.useEffect(() => {
     eventServices
@@ -20,7 +27,7 @@ export default function EventsCard(): JSX.Element {
   return (
     <>
       {/* {event && event.map(({myevent,index}:any)=> */}
-      <Card sx={{ Width: 120, mx: "30px" }}>
+      <Card sx={{ Width: 120, mx: "30px" }} onClick={()=>getEventDetails()} >
         <CardActionArea>
           <CardMedia
             component="img"

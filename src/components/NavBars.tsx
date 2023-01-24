@@ -89,6 +89,7 @@ function ResponsiveAppBar() {
             </Menu>
           </Box>
           <Grid
+            item
             xs
             display="flex"
             justifyContent="center"
