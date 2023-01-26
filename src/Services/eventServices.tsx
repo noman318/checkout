@@ -1,7 +1,9 @@
 import { evnethttp } from "../http/http";
-import EventData from "../Screens/Home/Interface";
-const getAll = () => {
-  return evnethttp.get<Array<EventData>>("/api/getall");
+import {IEventData} from "../Screens/Home/Interface";
+export const getAll = () => {
+  return evnethttp.get<Array<IEventData>>("/api/getall");
 };
-const eventServices = { getAll };
-export default eventServices;
+export const getById = (id:any) => {
+  return evnethttp.get<IEventData>(`/api/getbyid/${id}`);
+};
+

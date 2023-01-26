@@ -9,6 +9,7 @@ import {
   TextField,
   Avatar,
 } from "@mui/material";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { LockOutlined } from "@mui/icons-material";
 import { Link } from "react-router-dom";
@@ -16,6 +17,7 @@ import { Link } from "react-router-dom";
 import gifLightLogo from "../../assets/lightversion.gif";
 import loginServices from "../../Services/loginServices";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const theme = createTheme();
 
 export const LoginPage = () => {

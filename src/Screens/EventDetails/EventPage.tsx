@@ -1,10 +1,25 @@
-import React from 'react'
+import React ,{useState,useEffect} from 'react'
 import iron from '../../assets/iron-man.jpg'
 import { EventInfo } from './EventInfo';
 import { Container,Typography,Grid, Box } from '@mui/material';
 import Data from '../../data/events'
-
+import { useParams } from 'react-router-dom';
+import { getById } from '../../Services/eventServices';
+import { IEventData } from "../../Screens/Home/Interface";
 export const EventPage=()=> {
+  const params = useParams()
+  const singleParams = params.id;
+  const [event, setEvent] = useState<Array<IEventData>>([]);
+  useEffect(() => {
+    getById(singleParams)
+      .then((res: any) => {
+
+        setEvent(res.data);
+      })
+      .catch((e: Error) => {
+        console.log(e);
+      });
+  }, []);
   return (
           <Grid container component="main">
             <Grid item 
@@ -19,7 +34,9 @@ export const EventPage=()=> {
                 backgroundPosition: 'top center',
                 width:'100%',
                 minHeight: '30rem',
-                display:'flex'
+                display:'flex',
+                flexBasis:'50%',
+                minWidth:'50%'
               }} direction={'row'}>
                 <Box component={'img'} sx={{
                   display:'flex',
@@ -43,11 +60,11 @@ export const EventPage=()=> {
                 sx={{
                   padding:'2%',
                 }}>
-                  { <EventInfo />}
+                  { <EventInfo data={event}/>}
                 </Box>
             </Grid>
             <Grid item xs={12} md={6} lg={3} display={{ md:'none',lg:'none'}}>
-              <EventInfo />
+              <EventInfo data={event}/>
             </Grid>
             <Container sx={{margin:'1.5rem'}}>
               <Box>

@@ -4,49 +4,36 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-import eventServices from "../Services/eventServices";
-import EventData from "../Screens/Home/Interface";
+import { IEventData } from "../Screens/Home/Interface";
 import { useNavigate } from "react-router-dom";
-export default function EventsCard(): JSX.Element {
-  const navigate = useNavigate()
-  const getEventDetails =()=>{
-  console.log('Event details')
-  navigate('/eventdetails')
-  }
+type eventCard = {
+  data: IEventData;
+};
 
-  const [event, setevent] = React.useState<Array<EventData>>([]);
-  React.useEffect(() => {
-    eventServices
-      .getAll()
-      .then((res: any) => setevent(res))
-      .catch((e: Error) => {
-        console.log(e);
-      });
-  }, []);
-  console.log(event[1]);
+export const EventsCard = (props: eventCard) => {
+  const navigate = useNavigate()
+  const getEventDetails =(id:String)=>{
+  console.log('Event details')
+  navigate(`/eventdetails/${id}`)
+  }
   return (
-    <>
-      {/* {event && event.map(({myevent,index}:any)=> */}
-      <Card sx={{ Width: 120, mx: "30px" }} onClick={()=>getEventDetails()} >
-        <CardActionArea>
-          <CardMedia
-            component="img"
-            height="160"
-            image="https://picsum.photos/200/300"
-            alt="green iguana"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h6" component="div">
-              {/* {myevent.name} */}
-              Name
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {/* {myevent.description} */}
-              cat
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-    </>
+    <Card sx={{ Width: 120, mx: "30px" }} onClick={()=>getEventDetails(props.data._id)}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="160"
+          image={props.data.image}
+          alt="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h6" component="div">
+            {props.data.name}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            {props.data.category}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   );
-}
+};

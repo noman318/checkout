@@ -7,7 +7,7 @@ import { theme } from "./Theme/theme";
 import { ForgotPassword } from "./Screens/ForgotPassword/ForgotPassword";
 import { ResetPassword } from "./Screens/ResetPassword/ResetPassword";
 import { EventPage } from "./Screens/EventDetails/EventPage";
-import { EventsPages } from "./Screens/EventDetails/EventsPages";
+import { CheckOut } from "./Screens/CheckOut/CheckOut";
 
 function App() {
   return (
@@ -20,8 +20,8 @@ function App() {
             <Route path="/forgotpassword" element={<ForgotPassword />} />
             <Route path="/" element={<Home />} />
             <Route path="/resetpassword" element={<ResetPassword />} />
-            <Route path="/eventdetails" element={<EventPage/>}  />
-            <Route path="/eventdetails1" element={<EventsPages/>}  />
+            <Route path="/eventdetails/:id" element={<EventPage/>}  />
+            <Route path="/checkout" element={<CheckOut />}  />
           </Routes>
         </Router>
       </ThemeProvider>

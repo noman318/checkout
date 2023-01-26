@@ -1,7 +1,11 @@
 import { Grid, Typography, Button, Stack } from '@mui/material'
 import React from 'react'
-
-export const EventInfo = () => {
+import { IEventData } from '../Home/Interface'
+type eventPage={
+  data:IEventData[]
+}
+export const EventInfo = (props:eventPage) => {
+  // console.log({props.data.})
   return (
     <Grid sx={{p:'20px',marginTop:'30px'}}>
       <Typography sx={{color:'red',fontSize:'180%'}}><b>Pathaan</b></Typography>
