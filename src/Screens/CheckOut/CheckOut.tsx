@@ -32,7 +32,7 @@ export const CheckOut = () => {
           <img
             src={checkOut}
             alt="bg_image"
-            height={"100%"}
+            height={"90%"}
             width={"100%"}
           />
         </Grid>
@@ -61,9 +61,9 @@ export const CheckOut = () => {
               component="section"
               sx={{ mt: 1 }}
             >
-                <Stack direction={'row'} spacing={8} alignContent={'space-between'}>
-                    <Typography variant="h6" gutterBottom>Event Name (2 Tickets)</Typography>
-                    <Typography variant="h6" gutterBottom>Rs 500.00</Typography>
+                <Stack direction={'row'} justifyContent={'space-between'}>
+                    <Typography variant="body1" gutterBottom sx={{fontSize:'18px'}}><b>Event Name (2 Tickets)</b></Typography>
+                    <Typography variant="body1" gutterBottom sx={{fontSize:'18px'}}><b>Rs 500.00</b></Typography>
                 </Stack>
                 <Stack direction={'row'} spacing={1}>
                     <Typography variant="body1" gutterBottom>Language -</Typography>
@@ -71,12 +71,12 @@ export const CheckOut = () => {
                 </Stack>
                 <hr />
 
-                <Stack direction={'row'} spacing={8} sx={{mt:'10%'}}alignContent={'space-between'}>
+                <Stack direction={'row'} sx={{mt:'5%'}}justifyContent={'space-between'}>
                     <Typography variant="body2" gutterBottom>Subtotal</Typography>
                     <Typography variant="body2" gutterBottom>Rs 500.00</Typography>
                 </Stack>
 
-                <Stack direction={'row'} spacing={8} sx={{mt:'20%'}} alignContent={'space-between'}>
+                <Stack direction={'row'} sx={{mt:'20%'}} justifyContent={'space-between'}>
                     <Typography variant="h6" gutterBottom>Amount Payable</Typography>
                     <Typography variant="h6" gutterBottom>Rs 500.00</Typography>
                 </Stack>
